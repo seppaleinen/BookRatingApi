@@ -1,5 +1,12 @@
 # Book Rating API
 
+This project will be done in go-lang
+
+[https://golang.org/doc/install](https://golang.org/doc/install)
+or with homebrew on mac
+```bash
+brew install go
+```
 
 ### Endpoints are:
 ```
