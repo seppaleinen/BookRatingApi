@@ -3,6 +3,8 @@
 *.dll
 *.so
 *.dylib
+*.iml
+bookrating
 
 # Test binary, build with `go test -c`
 *.test
