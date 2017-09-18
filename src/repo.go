@@ -1,19 +1,20 @@
 package main
 
 
-var currentId int
+var currentID int
 
 var todos Todos
 
-// Give us some seed data
+// init Give us some seed data
 func init() {
 	RepoCreateTodo(Todo{Name: "Write presentation"})
 	RepoCreateTodo(Todo{Name: "Host meetup"})
 }
 
+// RepoFindTodo docs
 func RepoFindTodo(id int) Todo {
 	for _, t := range todos {
-		if t.Id == id {
+		if t.ID == id {
 			return t
 		}
 	}
@@ -21,10 +22,10 @@ func RepoFindTodo(id int) Todo {
 	return Todo{}
 }
 
-//this is bad, I don't think it passes race condtions
+// RepoCreateTodo this is bad, I don't think it passes race condtions
 func RepoCreateTodo(t Todo) Todo {
-	currentId += 1
-	t.Id = currentId
+	currentID++
+	t.ID = currentID
 	todos = append(todos, t)
 	return t
 }
